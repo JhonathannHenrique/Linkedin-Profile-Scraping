@@ -1,0 +1,310 @@
+# 🔵 LinkedIn Profile Scraper & Auto Connect
+
+<div align="center">
+
+**Ferramenta automatizada para extração de perfis do LinkedIn e envio de convites de conexão**
+
+[Instalação](#-instalação) • [Como Usar](#-como-usar) • [Recursos](#-recursos) • [Troubleshooting](#-troubleshooting)
+
+</div>
+
+---
+
+## 📋 Sobre o Projeto
+
+O **LinkedIn Profile Scraper & Auto Connect** é uma aplicação web completa que automatiza duas tarefas principais:
+
+1. **📊 Scraping de Perfis**: Extrai informações detalhadas de perfis do LinkedIn baseado em uma busca por profissão
+2. **🌐 Conexão Automática**: Envia convites de conexão automaticamente para os perfis extraídos
+
+### ✨ Destaques
+
+- Interface web moderna e intuitiva
+- Extração completa de dados dos perfis
+- Download de perfis em PDF
+- Envio automático de convites de conexão
+- Monitoramento em tempo real do progresso
+- Relatórios detalhados de resultados
+
+---
+
+## 🎯 Recursos
+
+### 📊 Módulo de Scraping
+
+- ✅ Busca por profissão/cargo
+- ✅ Extração de dados completos:
+  - Nome, headline e localização
+  - Seção "Sobre"
+  - Experiências profissionais
+  - Formação acadêmica
+  - Licenças e certificados
+  - Competências (skills)
+  - Idiomas
+  - Projetos
+  - Recomendações
+- ✅ Download de perfis em PDF
+- ✅ Exportação de dados em JSON
+- ✅ Progresso em tempo real
+- ✅ Modo headless ou visível
+
+### 🌐 Módulo de Conexão Automática
+
+- ✅ Upload de arquivo JSON (gerado pelo scraper)
+- ✅ Envio automático de convites
+- ✅ Validação de perfis antes de conectar
+- ✅ Relatório detalhado de sucessos/falhas
+- ✅ Tratamento inteligente de erros
+- ✅ Delays aleatórios para evitar bloqueios
+
+---
+
+## 🚀 Instalação
+
+### Pré-requisitos
+
+- **Python 3.8+** instalado
+- **Navegador Chromium** (instalado automaticamente pelo Playwright)
+- Conta do **LinkedIn** válida
+
+### Passo 1: Clone ou Baixe o Projeto
+
+```bash
+# Clone o repositório (se aplicável)
+git clone <url-do-projeto>
+cd linkedin-scraper
+
+# OU crie a estrutura manualmente
+mkdir linkedin-scraper
+cd linkedin-scraper
+```
+
+### Passo 2: Estrutura de Pastas
+
+Crie a seguinte estrutura:
+
+```
+linkedin-scraper/
+│
+├── app.py                    # Backend Flask
+├── .env                      # Credenciais (criar)
+├── requirements.txt          # Dependências (criar)
+│
+└── templates/
+    └── index.html           # Frontend
+```
+
+### Passo 3: Instale as Dependências
+
+Crie o arquivo `requirements.txt`:
+
+```txt
+flask==3.0.0
+playwright==1.40.0
+python-dotenv==1.0.0
+```
+
+Instale:
+
+```bash
+pip install -r requirements.txt
+playwright install chromium
+```
+
+### Passo 4: Configure as Credenciais
+
+Crie o arquivo `.env` na raiz:
+
+```env
+LINKEDIN_USER=seu_email@exemplo.com
+LINKEDIN_PASS=sua_senha_aqui
+```
+
+⚠️ **IMPORTANTE**: 
+- Nunca compartilhe este arquivo
+- Adicione `.env` ao `.gitignore`
+- Use uma senha forte e única
+
+### Passo 5: Execute a Aplicação
+
+```bash
+python app.py
+```
+
+Acesse: **http://localhost:5000**
+
+---
+
+## 💡 Como Usar
+
+### 🔍 Etapa 1: Scraping de Perfis
+
+1. **Acesse a aba "Scraping"**
+2. **Digite a profissão** que deseja buscar
+   - Exemplos: "Desenvolvedor Python", "Analista de Dados", "Designer UI/UX"
+3. **(Opcional)** Marque "Mostrar navegador" para ver o robô em ação
+4. **Clique em "Iniciar Busca"**
+5. **Aguarde** o processamento (acompanhe o progresso)
+6. **Baixe os resultados**:
+   - **📄 JSON (.txt)**: Dados estruturados de todos os perfis
+   - **📁 PDFs (.zip)**: Perfis completos em PDF
+
+### 🤝 Etapa 2: Conexão Automática
+
+1. **Acesse a aba "Conexão"**
+2. **Faça upload** do arquivo JSON gerado na Etapa 1
+3. **Aguarde a validação** dos perfis
+4. **(Opcional)** Marque "Mostrar navegador"
+5. **Clique em "Iniciar Conexões"**
+6. **Acompanhe** os resultados em tempo real:
+   - ✅ Sucessos
+   - ❌ Falhas
+   - ⚠️ Perfis pulados
+7. **Veja o relatório detalhado** ao final
+
+---
+
+## 📊 Dados Extraídos
+
+Para cada perfil, o scraper extrai:
+
+```json
+{
+  "name": "Nome Completo",
+  "headline": "Cargo/Descrição",
+  "location": "Cidade, País",
+  "about": "Biografia completa...",
+  "url": "https://linkedin.com/in/perfil",
+  "experiences": [
+    {
+      "title": "Cargo",
+      "company": "Empresa",
+      "date_range": "jan 2020 - presente",
+      "location": "Cidade",
+      "description": "Descrição..."
+    }
+  ],
+  "education": [...],
+  "certifications": [...],
+  "skills": ["Python", "JavaScript", ...],
+  "languages": [...],
+  "projects": [...],
+  "recommendations_count": "10",
+  "pdf_downloaded": true
+}
+```
+
+---
+
+## 🛡️ Segurança e Boas Práticas
+
+### ⚠️ Avisos Importantes
+
+- **Use com responsabilidade**: Esta ferramenta deve ser usada respeitando os termos de serviço do LinkedIn
+- **Evite abusos**: Não faça scraping excessivo ou envie muitos convites em pouco tempo
+- **Risco de bloqueio**: O uso excessivo pode resultar em bloqueio temporário ou permanente da conta
+- **Dados pessoais**: Trate os dados extraídos com cuidado e respeite a privacidade
+
+### 🔒 Recomendações
+
+1. **Delays aleatórios**: O código já inclui delays entre ações
+2. **Limite diário**: Não processe mais de 50-100 perfis por dia
+3. **Horários alternados**: Varie os horários de uso
+4. **Conta secundária**: Considere usar uma conta de teste
+5. **Mensagens personalizadas**: Evite enviar convites genéricos em massa
+
+---
+
+## 🔧 Troubleshooting
+
+### Problema: "ModuleNotFoundError: No module named 'flask'"
+
+**Solução:**
+```bash
+pip install flask
+```
+
+### Problema: "Playwright não instalado"
+
+**Solução:**
+```bash
+playwright install chromium
+```
+
+### Problema: "Login failed" ou "Credenciais inválidas"
+
+**Soluções:**
+1. Verifique o arquivo `.env`
+2. Confirme email e senha corretos
+3. Desative autenticação de dois fatores temporariamente
+4. Verifique se há CAPTCHAs bloqueando
+
+---
+
+## 📁 Estrutura de Arquivos Gerados
+
+```
+linkedin-scraper/
+│
+├── linkedin_profiles/          # PDFs individuais
+│   ├── pdf_1_Nome_Pessoa.pdf
+│   ├── pdf_2_Outro_Nome.pdf
+│   └── ...
+│
+├── temp_results/               # JSONs temporários
+│   ├── linkedin_profiles_123456.json
+│   └── uploaded_789012.json
+│
+└── screenshots/                # Screenshots de erro (debug)
+    └── error_pdf_download_1.png
+```
+
+---
+
+## 🎨 Interface
+
+A aplicação possui uma interface moderna com:
+
+- **Design responsivo** adaptável a diferentes telas
+- **Gradiente azul LinkedIn** no fundo
+- **Ícones FontAwesome** para melhor UX
+- **Animações suaves** em transições
+- **Feedback visual** em todas as ações
+- **Barras de progresso** animadas
+- **Estatísticas em tempo real**
+
+---
+
+## 📞 Suporte
+
+Se tiver dúvidas ou problemas:
+
+1. Verifique a seção [Troubleshooting](#-troubleshooting)
+2. Revise os logs no terminal
+3. Abra uma Issue no repositório (se aplicável)
+
+---
+
+## ⚖️ Disclaimer Legal
+
+Esta ferramenta é apenas para fins educacionais e de automação pessoal. O uso desta ferramenta deve estar em conformidade com:
+
+- Termos de Serviço do LinkedIn
+- Leis de proteção de dados (LGPD, GDPR, etc.)
+- Políticas de uso justo
+
+O autor não se responsabiliza por:
+- Bloqueios de conta
+- Violações dos termos de serviço
+- Uso indevido dos dados coletados
+- Danos diretos ou indiretos
+
+**Use com responsabilidade e ética!**
+
+---
+
+<div align="center">
+
+[⬆ Voltar ao topo](#-linkedin-profile-scraper--auto-connect)
+
+</div>
