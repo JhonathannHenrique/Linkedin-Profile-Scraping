@@ -12,17 +12,17 @@
 
 O **LinkedIn Profile Scraper & Auto Connect** é uma aplicação web completa que automatiza duas tarefas principais:
 
-1. **📊 Scraping de Perfis**: Extrai informações detalhadas de perfis do LinkedIn baseado em uma busca por profissão
+1. **📊 Scraping de Perfis**: Extrai informações detalhadas de perfis do LinkedIn baseado em uma busca por profissão  
 2. **🌐 Conexão Automática**: Envia convites de conexão automaticamente para os perfis extraídos
 
 ### ✨ Destaques
 
-- Interface web moderna e intuitiva
-- Extração completa de dados dos perfis
-- Download de perfis em PDF
-- Envio automático de convites de conexão
-- Monitoramento em tempo real do progresso
-- Relatórios detalhados de resultados
+- Interface web moderna e intuitiva  
+- Extração completa de dados dos perfis  
+- Download de perfis em PDF  
+- Envio automático de convites de conexão  
+- Monitoramento em tempo real do progresso  
+- Relatórios detalhados de resultados  
 
 ---
 
@@ -30,30 +30,30 @@ O **LinkedIn Profile Scraper & Auto Connect** é uma aplicação web completa qu
 
 ### 📊 Módulo de Scraping
 
-- ✅ Busca por profissão/cargo
-- ✅ Extração de dados completos:
-  - Nome, headline e localização
-  - Seção "Sobre"
-  - Experiências profissionais
-  - Formação acadêmica
-  - Licenças e certificados
-  - Competências (skills)
-  - Idiomas
-  - Projetos
-  - Recomendações
-- ✅ Download de perfis em PDF
-- ✅ Exportação de dados em JSON
-- ✅ Progresso em tempo real
-- ✅ Modo headless ou visível
+- ✅ Busca por profissão/cargo  
+- ✅ Extração de dados completos:  
+  - Nome, headline e localização  
+  - Seção "Sobre"  
+  - Experiências profissionais  
+  - Formação acadêmica  
+  - Licenças e certificados  
+  - Competências (skills)  
+  - Idiomas  
+  - Projetos  
+  - Recomendações  
+- ✅ Download de perfis em PDF  
+- ✅ Exportação de dados em JSON  
+- ✅ Progresso em tempo real  
+- ✅ Modo headless ou visível  
 
 ### 🌐 Módulo de Conexão Automática
 
-- ✅ Upload de arquivo JSON (gerado pelo scraper)
-- ✅ Envio automático de convites
-- ✅ Validação de perfis antes de conectar
-- ✅ Relatório detalhado de sucessos/falhas
-- ✅ Tratamento inteligente de erros
-- ✅ Delays aleatórios para evitar bloqueios
+- ✅ Upload de arquivo JSON (gerado pelo scraper)  
+- ✅ Envio automático de convites  
+- ✅ Validação de perfis antes de conectar  
+- ✅ Relatório detalhado de sucessos/falhas  
+- ✅ Tratamento inteligente de erros  
+- ✅ Delays aleatórios para evitar bloqueios  
 
 ---
 
@@ -61,9 +61,9 @@ O **LinkedIn Profile Scraper & Auto Connect** é uma aplicação web completa qu
 
 ### Pré-requisitos
 
-- **Python 3.8+** instalado
-- **Navegador Chromium** (instalado automaticamente pelo Playwright)
-- Conta do **LinkedIn** válida
+- **Python 3.8+** instalado  
+- **Navegador Chromium** (instalado automaticamente pelo Playwright)  
+- Conta do **LinkedIn** válida  
 
 ### Passo 1: Clone ou Baixe o Projeto
 
@@ -118,10 +118,10 @@ LINKEDIN_USER=seu_email@exemplo.com
 LINKEDIN_PASS=sua_senha_aqui
 ```
 
-⚠️ **IMPORTANTE**: 
-- Nunca compartilhe este arquivo
-- Adicione `.env` ao `.gitignore`
-- Use uma senha forte e única
+⚠️ **IMPORTANTE**:  
+- Nunca compartilhe este arquivo  
+- Adicione `.env` ao `.gitignore`  
+- Use uma senha forte e única  
 
 ### Passo 5: Execute a Aplicação
 
@@ -137,34 +137,32 @@ Acesse: **http://localhost:5000**
 
 ### 🔍 Etapa 1: Scraping de Perfis
 
-1. **Acesse a aba "Scraping"**
-2. **Digite a profissão** que deseja buscar
-   - Exemplos: "Desenvolvedor Python", "Analista de Dados", "Designer UI/UX"
-3. **(Opcional)** Marque "Mostrar navegador" para ver o robô em ação
-4. **Clique em "Iniciar Busca"**
-5. **Aguarde** o processamento (acompanhe o progresso)
+1. **Acesse a aba "Scraping"**  
+2. **Digite a profissão** que deseja buscar  
+   - Exemplos: "Desenvolvedor Python", "Analista de Dados", "Designer UI/UX"  
+3. **(Opcional)** Marque "Mostrar navegador"  
+4. **Clique em "Iniciar Busca"**  
+5. **Acompanhe o progresso**  
 6. **Baixe os resultados**:
-   - **📄 JSON (.txt)**: Dados estruturados de todos os perfis
-   - **📁 PDFs (.zip)**: Perfis completos em PDF
+   - **📄 JSON (.txt)**  
+   - **📁 PDFs (.zip)**  
 
 ### 🤝 Etapa 2: Conexão Automática
 
-1. **Acesse a aba "Conexão"**
-2. **Faça upload** do arquivo JSON gerado na Etapa 1
-3. **Aguarde a validação** dos perfis
-4. **(Opcional)** Marque "Mostrar navegador"
-5. **Clique em "Iniciar Conexões"**
-6. **Acompanhe** os resultados em tempo real:
-   - ✅ Sucessos
-   - ❌ Falhas
-   - ⚠️ Perfis pulados
-7. **Veja o relatório detalhado** ao final
+1. **Acesse a aba "Conexão"**  
+2. **Faça upload** do JSON gerado  
+3. **Aguarde a validação**  
+4. **(Opcional)** Marque "Mostrar navegador"  
+5. **Clique em "Iniciar Conexões"**  
+6. **Acompanhe resultados**:
+   - ✅ Sucessos  
+   - ❌ Falhas  
+   - ⚠️ Perfis pulados  
+7. **Relatório final disponível**  
 
 ---
 
 ## 📊 Dados Extraídos
-
-Para cada perfil, o scraper extrai:
 
 ```json
 {
@@ -182,11 +180,11 @@ Para cada perfil, o scraper extrai:
       "description": "Descrição..."
     }
   ],
-  "education": [...],
-  "certifications": [...],
-  "skills": ["Python", "JavaScript", ...],
-  "languages": [...],
-  "projects": [...],
+  "education": [],
+  "certifications": [],
+  "skills": ["Python", "JavaScript"],
+  "languages": [],
+  "projects": [],
   "recommendations_count": "10",
   "pdf_downloaded": true
 }
@@ -198,44 +196,41 @@ Para cada perfil, o scraper extrai:
 
 ### ⚠️ Avisos Importantes
 
-- **Use com responsabilidade**: Esta ferramenta deve ser usada respeitando os termos de serviço do LinkedIn
-- **Evite abusos**: Não faça scraping excessivo ou envie muitos convites em pouco tempo
-- **Risco de bloqueio**: O uso excessivo pode resultar em bloqueio temporário ou permanente da conta
-- **Dados pessoais**: Trate os dados extraídos com cuidado e respeite a privacidade
+- Use respeitando os **Termos de Serviço do LinkedIn**  
+- Evite scraping excessivo  
+- Não envie convites em massa  
+- Possível risco de **bloqueio temporário/permanente**  
 
 ### 🔒 Recomendações
 
-1. **Delays aleatórios**: O código já inclui delays entre ações
-2. **Limite diário**: Não processe mais de 50-100 perfis por dia
-3. **Horários alternados**: Varie os horários de uso
-4. **Conta secundária**: Considere usar uma conta de teste
-5. **Mensagens personalizadas**: Evite enviar convites genéricos em massa
+1. Utilize delays aleatórios  
+2. Não processe mais de **50–100 perfis/dia**  
+3. Varie horários  
+4. Use uma conta secundária  
+5. Evite mensagens padrão repetitivas  
 
 ---
 
 ## 🔧 Troubleshooting
 
-### Problema: "ModuleNotFoundError: No module named 'flask'"
+### ❗ "ModuleNotFoundError: No module named 'flask'"
 
-**Solução:**
 ```bash
 pip install flask
 ```
 
-### Problema: "Playwright não instalado"
+### ❗ "Playwright não instalado"
 
-**Solução:**
 ```bash
 playwright install chromium
 ```
 
-### Problema: "Login failed" ou "Credenciais inválidas"
+### ❗ "Login failed" ou "Credenciais inválidas"
 
-**Soluções:**
-1. Verifique o arquivo `.env`
-2. Confirme email e senha corretos
-3. Desative autenticação de dois fatores temporariamente
-4. Verifique se há CAPTCHAs bloqueando
+- Verifique o `.env`  
+- Confirme email e senha  
+- Desative 2FA temporariamente  
+- Verifique se há CAPTCHA  
 
 ---
 
@@ -244,16 +239,15 @@ playwright install chromium
 ```
 linkedin-scraper/
 │
-├── linkedin_profiles/          # PDFs individuais
+├── linkedin_profiles/
 │   ├── pdf_1_Nome_Pessoa.pdf
 │   ├── pdf_2_Outro_Nome.pdf
-│   └── ...
 │
-├── temp_results/               # JSONs temporários
+├── temp_results/
 │   ├── linkedin_profiles_123456.json
 │   └── uploaded_789012.json
 │
-└── screenshots/                # Screenshots de erro (debug)
+└── screenshots/
     └── error_pdf_download_1.png
 ```
 
@@ -261,45 +255,41 @@ linkedin-scraper/
 
 ## 🎨 Interface
 
-A aplicação possui uma interface moderna com:
-
-- **Design responsivo** adaptável a diferentes telas
-- **Gradiente azul LinkedIn** no fundo
-- **Ícones FontAwesome** para melhor UX
-- **Animações suaves** em transições
-- **Feedback visual** em todas as ações
-- **Barras de progresso** animadas
-- **Estatísticas em tempo real**
+- Layout moderno  
+- Design responsivo  
+- Gradiente azul estilo LinkedIn  
+- Ícones FontAwesome  
+- Animações suaves  
+- Barras de progresso  
+- Estatísticas em tempo real  
 
 ---
 
 ## 📞 Suporte
 
-Se tiver dúvidas ou problemas:
-
-1. Verifique a seção [Troubleshooting](#-troubleshooting)
-2. Revise os logs no terminal
-3. Abra uma Issue no repositório (se aplicável)
+- Consulte o Troubleshooting  
+- Verifique logs  
+- Abra uma Issue no repositório  
 
 ---
 
 ## ⚖️ Disclaimer Legal
 
-Esta ferramenta é apenas para fins educacionais e de automação pessoal. O uso desta ferramenta deve estar em conformidade com:
+Ferramenta para uso educacional.  
+O uso deve estar em conformidade com:
 
-- Termos de Serviço do LinkedIn
-- Leis de proteção de dados (LGPD, GDPR, etc.)
-- Políticas de uso justo
+- Termos do LinkedIn  
+- LGPD, GDPR e leis de privacidade  
 
-O autor não se responsabiliza por:
-- Bloqueios de conta
-- Violações dos termos de serviço
-- Uso indevido dos dados coletados
-- Danos diretos ou indiretos
+O autor **não se responsabiliza** por:
 
-**Use com responsabilidade e ética!**
+- Bloqueios  
+- Uso indevido  
+- Violações de termos  
+- Danos diretos ou indiretos  
+
+**Use com responsabilidade.**
 
 ---
 
 [⬆ Voltar ao topo](#-linkedin-profile-scraper--auto-connect)
-
